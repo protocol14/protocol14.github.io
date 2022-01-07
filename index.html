@@ -446,9 +446,7 @@ function openProject() {
 				if (status === "error") {
 				    alert("An error");
 				} else {
-				   singleProject.animate({
-					height: "hide", 
-				   }, 0.001);	
+				   singleProject.hide();
 				    singleProject.animate({
 					height: "show", 
 				   }, 500);	
