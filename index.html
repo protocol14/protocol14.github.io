@@ -425,11 +425,7 @@ $('.menu  a').on('click', function(e) {
         $('.home-fullscreen').css('height', windowHeight);
     }
 }
-
-$("singleProject").animate({
-	height: "hide", 
-}, 0.001);	
-		
+	
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
@@ -446,7 +442,7 @@ function openProject() {
 				if (status === "error") {
 				    alert("An error");
 				} else {
-				   singleProject.hide();
+					singleProject.hide();
 				    singleProject.animate({
 					height: "show", 
 				   }, 500);	
