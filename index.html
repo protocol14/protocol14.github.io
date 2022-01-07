@@ -441,11 +441,8 @@ function openProject() {
 
        			   
 			       
-		       singleProject.load(link, function (response, status) {
-		       if (status == "error") {
-			       singleProject.slideDown(500)
-			      alert("An error");
-			} else {
+		       singleProject.load(link, function (response) {
+
 				singleProject.slideDown(500)
 				 var closeProject = $('#close-project');
 				 closeProject.on('click', function () {
@@ -455,7 +452,6 @@ function openProject() {
 					 singleProject.empty();
 				     }, 500);
 				 });
-			      }
 			  });
 			   
 
