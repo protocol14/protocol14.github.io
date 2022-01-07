@@ -44,7 +44,6 @@ $('.menu  a').on('click', function(e) {
 
 //Initialization 
 $(window).load(function () {
-    openProject();
     homeFullScreen();
 
     smoothScroll.init();
