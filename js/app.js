@@ -41,38 +41,7 @@ $('.menu  a').on('click', function(e) {
     }
 }
 
- //Load details of single project from portfolio.
- function openProject() {
 
-    var portfolioItem = $('.portfolio-item  a');
-    var singleProject = $('#single-project');
-    
-    portfolioItem.click(function () {
-
-        var link = $(this).attr('href');
-
-
-        singleProject.empty();
-
-         singleProject.load(link, function (response, status) {
-             if (status === "error") {
-                 alert("An error");
-             } else {
-
-                 var closeProject = $('#close-project');
-                 closeProject.on('click', function () {
-                     singleProject.slideUp(500);
-                     setTimeout(function () {
-
-                         singleProject.empty();
-                     }, 500);
-                 });
-             }
-         });
-     
-        return false;
-    });
-}
 //Initialization 
 $(window).load(function () {
     openProject();
