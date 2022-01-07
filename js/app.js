@@ -75,7 +75,7 @@ $('.menu  a').on('click', function(e) {
     });
 }
 //Initialization
-$(window).lode(function () {
+$(window).load(function () {
     openProject();
     homeFullScreen();
 
