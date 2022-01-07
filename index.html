@@ -435,7 +435,7 @@ function openProject() {
 		    portfolioItem.click(function () {
 
 			   var link = $(this).attr('href');
-			if(singleProject.is(':empty')) {
+			if(isEmpty(singleProject)) {
 				projectLoad()
 			} else {
 				singleProject.animate({
