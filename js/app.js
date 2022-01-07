@@ -53,22 +53,26 @@ function openProject() {
 
 			   singleProject.empty();
 
-       			   singleProject.slideDown(500)
-			       
-		       singleProject.load(link, function (response, status) {
-		       if (status === "error") {
-			      alert("An error");
-			} else {
-				 var closeProject = $('#close-project');
-				 closeProject.on('click', function () {
-				     singleProject.slideUp(500);
-				     setTimeout(function () {
+       			   singleProject.slideDown(500,swing,openProject())
+		function openProject2(){
+			singleProject.load(link, function (response, status) {
+				if (status === "error") {
+				    alert("An error");
+				} else {
+				    singleProject.slideDown(500);
 
-					 singleProject.empty();
-				     }, 500);
-				 });
-			      }
-			  });
+				    var closeProject = $('#close-project');
+				    closeProject.on('click', function () {
+					singleProject.slideUp(500);
+					setTimeout(function () {
+
+					    singleProject.empty();
+					}, 500);
+				    });
+				}
+			    });
+		}
+		       
 			   
 
 			  return false;
