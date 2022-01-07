@@ -428,7 +428,7 @@ $('.menu  a').on('click', function(e) {
 
 $("singleProject").animate({
 	height: "hide", 
-}, 10);	
+}, 0.001);	
 		
 function openProject() {
 
@@ -446,6 +446,9 @@ function openProject() {
 				if (status === "error") {
 				    alert("An error");
 				} else {
+				   singleProject.animate({
+					height: "hide", 
+				   }, 0.001);	
 				    singleProject.animate({
 					height: "show", 
 				   }, 500);	
