@@ -439,12 +439,14 @@ function openProject() {
 
 			   singleProject.empty();
 
-       			   singleProject.slideDown(500)
+       			   
 			       
 		       singleProject.load(link, function (response, status) {
-		       if (status === "error") {
+		       if (status == "error") {
+			       singleProject.slideDown(500)
 			      alert("An error");
 			} else {
+				singleProject.slideDown(500)
 				 var closeProject = $('#close-project');
 				 closeProject.on('click', function () {
 				     singleProject.slideUp(500);
