@@ -427,6 +427,10 @@ $('.menu  a').on('click', function(e) {
     }
 }
 
+$("singleProject").animate({
+	height: "hide", 
+}, 10);	
+		
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
@@ -443,11 +447,15 @@ function openProject() {
 				if (status === "error") {
 				    alert("An error");
 				} else {
-				    singleProject.slideDown(500);
+				    singleProject.animate({
+					height: "show", 
+				   }, 500);	
 
 				    var closeProject = $('#close-project');
 				    closeProject.on('click', function () {
-					singleProject.slideUp(500,swing);
+					singleProject.animate({
+						height: "hide", 
+				   	}, 500);
 					setTimeout(function () {
 
 					    singleProject.empty();
@@ -460,7 +468,7 @@ function openProject() {
 		   });
 }	
 //Initialization 
-$(document).ready(function () {
+$(window).load(function () {
     openProject();
     homeFullScreen();
 
