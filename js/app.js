@@ -51,24 +51,23 @@ $('.menu  a').on('click', function(e) {
 
         singleProject.empty();
 
-        setTimeout(function () {
-            singleProject.load(link, function (response, status) {
-                if (status === "error") {
-                    alert("An error");
-                } else {
-                    singleProject.slideDown(500);
-                 
-                    var closeProject = $('#close-project');
-                    closeProject.on('click', function () {
-                        singleProject.slideUp(500);
-                        setTimeout(function () {
+         singleProject.load(link, function (response, status) {
+             if (status === "error") {
+                 alert("An error");
+             } else {
+                 singleProject.slideDown(500);
 
-                            singleProject.empty();
-                        }, 500);
-                    });
-                }
-            });
-        }, 500);
+                 var closeProject = $('#close-project');
+                 closeProject.on('click', function () {
+                     singleProject.slideUp(500);
+                     setTimeout(function () {
+
+                         singleProject.empty();
+                     }, 500);
+                 });
+             }
+         });
+     
         return false;
     });
 }
