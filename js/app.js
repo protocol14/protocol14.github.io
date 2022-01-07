@@ -72,7 +72,7 @@ $('.menu  a').on('click', function(e) {
     });
 }
 //Initialization
-$(window).load(function () {
+$(document).ready(function () {
     openProject();
     homeFullScreen();
 
