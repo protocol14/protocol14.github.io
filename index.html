@@ -434,11 +434,21 @@ function openProject() {
 		    portfolioItem.click(function () {
 
 			   var link = $(this).attr('href');
-
-
-			   singleProject.empty();
-
-			  singleProject.load(link, function (response, status) {
+			if(singleProject.is(':empty')) {
+				projectLoad()
+			} else {
+				singleProject.animate({
+					height: "hide", 
+				   }, 400);
+				
+				setTimeout(function () {
+					singleProject.empty();
+					projectLoad();
+				}, 620);
+			}
+			
+			function projectLoad(){
+				singleProject.load(link, function (response, status) {
 				if (status === "error") {
 				    alert("An error");
 				} else {
@@ -459,6 +469,8 @@ function openProject() {
 				    });
 				}
 			    });
+			}
+			  
 
 			  return false;
 		   });
