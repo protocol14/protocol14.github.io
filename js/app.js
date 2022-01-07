@@ -47,9 +47,7 @@ $('.menu  a').on('click', function(e) {
     portfolioItem.click(function () {
 
         var link = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: singleProject.offset().top - 30
-        }, 500);
+
 
         singleProject.empty();
 
