@@ -58,7 +58,6 @@ $('.menu  a').on('click', function(e) {
              if (status === "error") {
                  alert("An error");
              } else {
-                 singleProject.slideDown(500,swing);
 
                  var closeProject = $('#close-project');
                  closeProject.on('click', function () {
