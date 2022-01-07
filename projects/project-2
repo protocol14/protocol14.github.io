@@ -1,0 +1,16 @@
+<div class="project">
+	<div class="row">
+		<div class="col-md-6">
+			<img src="../img/todo.png" class="img-responsive">
+		</div>
+		<div class="col-md-6 project-info">
+			<a href="javascript:void(0)" class="close" id="close-project"><i class="fa fa-close"></i></a>
+			<h3>Project Name : Todo</h3>
+			<p>개인 프로젝트로 제작된 웹사이트입니다.<br>MVC 모델2로 구현된 캘린더 사이트입니다.
+			</p>
+			<a href="http://3.34.50.52/todo/login" class="btn btn-primary">View Project</a>
+			<br>
+			<br>
+		</div>
+	</div>
+</div>
