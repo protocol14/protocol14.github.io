@@ -192,7 +192,7 @@
 			<div id="single-project"></div>
 			<div class="row">
 				<figure class="portfolio-item col-md-4 col-sm-6">
-					<img class="img-responsive" src="img/voyageIndex.png" />
+					<img src="img/voyageIndex.png" />
 					<figcaption class="mask">
 						<a href="projects/project-1.html">
 							<i class="glyphicon glyphicon-plus"></i>
@@ -267,7 +267,7 @@
                       var geocoder = new kakao.maps.services.Geocoder();
 						
 						// 주소로 좌표를 검색합니다
-						geocoder.addressSearch($('경기 안성시 중앙로 274-7 한빛마을 우남 퍼스트빌').text(), function(result, status) {
+						geocoder.addressSearch('경기 안성시 중앙로 274-7 한빛마을 우남 퍼스트빌', function(result, status) {
 						
 							// 정상적으로 검색이 완료됐으면 
 						     if (status === kakao.maps.services.Status.OK) {
@@ -280,7 +280,7 @@
 						        });
 						        // 인포윈도우로 장소에 대한 설명을 표시합니다
 						        var infowindow = new kakao.maps.InfoWindow({
-						            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#addressName').text()+'</div>'
+						            content: '<div style="width:150px;text-align:center;padding:6px 0;"></div>'
 						        });
 						        infowindow.open(map, marker);
 						        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
