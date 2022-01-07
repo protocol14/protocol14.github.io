@@ -5,6 +5,8 @@
  * Author: GraphBerry
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
+ *
+ * slideDown() -> animate()
  */
 /*
  * 구글맵보다 카카오맵
