@@ -40,30 +40,42 @@ $('.menu  a').on('click', function(e) {
         $('.home-fullscreen').css('height', windowHeight);
     }
 }
-
+	
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
 		    var singleProject = $('#single-project');
-
+	
 		    portfolioItem.click(function () {
-
 			   var link = $(this).attr('href');
-
-
-			   singleProject.empty();
-
-       			   singleProject.slideDown(500,swing,openProject())
-		function openProject2(){
-			singleProject.load(link, function (response, status) {
+			if(singleProject.is(':empty')) {
+				projectLoad()
+			} else {
+				singleProject.animate({
+					height: "hide", 
+				}, 400);
+				
+				setTimeout(function () {
+					singleProject.empty();
+					projectLoad();
+				}, 620);
+			}
+			
+			function projectLoad(){
+				singleProject.load(link, function (response, status) {
 				if (status === "error") {
 				    alert("An error");
 				} else {
-				    singleProject.slideDown(500);
+					singleProject.hide();
+				    singleProject.animate({
+					height: "show", 
+				   }, 500);	
 
 				    var closeProject = $('#close-project');
 				    closeProject.on('click', function () {
-					singleProject.slideUp(500);
+					singleProject.animate({
+						height: "hide", 
+				   	}, 500);
 					setTimeout(function () {
 
 					    singleProject.empty();
@@ -71,9 +83,8 @@ function openProject() {
 				    });
 				}
 			    });
-		}
-		       
-			   
+			}
+			  
 
 			  return false;
 		   });
@@ -91,5 +102,3 @@ $(window).load(function () {
 $(window).resize(function () {
     homeFullScreen();
 });
-
-
