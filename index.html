@@ -431,21 +431,20 @@ function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
 		    var singleProject = $('#single-project');
-		    const timeout1 = null;
-		    const timeout2 = null;
- 		    const timeout3 = null;
+		    const timeout = null;
 		    portfolioItem.click(function () {
 
 			   var link = $(this).attr('href');
 			if(singleProject.is(':empty')) {
 				projectLoad()
+			} else if(timeout != null){
+				clearTimeout(timeout);
 			} else {
-				clearTimeout(timeout1);
 				singleProject.animate({
 					height: "hide", 
-				   }, 400);
+				}, 400);
 				
-				timeout1 = setTimeout(function () {
+				timeout = setTimeout(function () {
 					singleProject.empty();
 					projectLoad();
 				}, 620);
