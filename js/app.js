@@ -103,8 +103,8 @@ function openProject() {
 						height: "show", 
 					   }, 500);	
 
-					    var closeProject = $('#close-project');
-					    closeProject.on('click', function () {
+					    var closeProject1 = $('#close-project');
+					    closeProject1.on('click', function () {
 						singleProject1.animate({
 							height: "hide", 
 						}, 500);
@@ -141,8 +141,8 @@ function openProject() {
 						height: "show", 
 					   }, 500);	
 
-					    var closeProject = $('#close-project');
-					    closeProject.on('click', function () {
+					    var closeProject3 = $('#close-project');
+					    closeProject3.on('click', function () {
 						singleProject3.animate({
 							height: "hide", 
 						}, 500);
