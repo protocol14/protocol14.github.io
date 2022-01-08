@@ -79,7 +79,7 @@ function openProject() {
 				    scrollTop: singleProject1.offset().top
 				}, 500);
 				if(singleProject1.is(':empty')) {
-					projectLoad()
+					projectLoad1()
 				} else {
 					singleProject1.animate({
 						height: "hide", 
@@ -87,11 +87,29 @@ function openProject() {
 
 					setTimeout(function () {
 						singleProject1.empty();
-						projectLoad();
+						projectLoad1();
+					}, 620);
+				}
+			} else {
+				var singleProject3 = $('#single-project-3');
+				
+				if(singleProject3.is(':empty')) {
+					projectLoad3()
+				} else {
+					singleProject3.animate({
+						height: "hide", 
+					}, 400);
+
+					setTimeout(function () {
+						singleProject3.empty();
+						projectLoad3();
 					}, 620);
 				}
 
-				function projectLoad(){
+				
+			}
+			
+			function projectLoad1(){
 					singleProject1.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
@@ -114,23 +132,8 @@ function openProject() {
 					}
 				    });
 				}
-			} else {
-				var singleProject3 = $('#single-project-3');
-				
-				if(singleProject3.is(':empty')) {
-					projectLoad()
-				} else {
-					singleProject3.animate({
-						height: "hide", 
-					}, 400);
-
-					setTimeout(function () {
-						singleProject3.empty();
-						projectLoad();
-					}, 620);
-				}
-
-				function projectLoad(){
+			    
+			    function projectLoad3(){
 					singleProject3.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
@@ -153,9 +156,7 @@ function openProject() {
 					}
 				    });
 				}
-			}
-			
-			
+			    
 			  
 
 			  return false;
