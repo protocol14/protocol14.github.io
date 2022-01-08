@@ -38,6 +38,7 @@ function isMobile() {
  function homeFullScreen() {
 
     var homeSection = $('.home');
+    var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
 
     if (homeSection.hasClass('home-fullscreen')) {
@@ -45,7 +46,9 @@ function isMobile() {
     }
 	 
     if(isMobile()){
-        $('.header-container').css('height', windowHeight/3);
+        if(windowWidth < 1000){
+            $('.header-container').css('height', windowHeight/2.5);
+        }
     }
 }
 	
