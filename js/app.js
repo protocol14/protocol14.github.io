@@ -57,9 +57,9 @@ $('.menu  a').on('click', function(e) {
     } else {
 	$('#skill-portrait').css("display", "block"); 
 	$('#skill-landscape').css("display", "none"); 
-	
-	$('#portfolio-1').css("display", "none"); 
-	$('#portfolio-2').css("display", "block"); 
+	    
+	$('#portfolio-1').css("display", "block"); 
+	$('#portfolio-2').css("display", "none"); 
 	$('#portfolio-3').css("display", "none"); 
     }
     
