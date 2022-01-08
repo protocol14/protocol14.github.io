@@ -40,13 +40,15 @@ function isMobile() {
     var homeSection = $('.home');
     var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
-
+	
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
     }
+	
 	 
+	 console.log(windowWidth);
     if(isMobile()){
-        if(windowWidth < 1000){
+        if(windowWidth < 900){
             $('.header-container').css('height', windowHeight/2.5);
         }
     }
