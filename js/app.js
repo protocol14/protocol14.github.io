@@ -43,10 +43,13 @@ $('.menu  a').on('click', function(e) {
     if(windowWidth < 800){
 	$('.header-container').css('height', windowHeight/2.5);
 	$('#skill-portrait').css("display", "block"); 
+	$('#skill-landscape').css("display", "none"); 
     } else {
 	$('#skill-portrait').css("display", "block"); 
+	$('#skill-landscape').css("display", "none"); 
     }
     if(windowWidth >= 1000){
+	$('#skill-portrait').css("display", "none"); 
 	$('#skill-landscape').css("display", "block"); 
     }
 }
