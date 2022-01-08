@@ -10,9 +10,8 @@
 	    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 	}
 	if(isMobile()){
-		document.write("ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎ");
+		$("#header").style="margin-top: 50%;";
 	} else {
-		console.log('ㅎㅇ');
 	}
 			      
 </script>
@@ -64,7 +63,7 @@
 				<li><a href="https://github.com/protocol14" onclick="location.href='https://github.com/protocol14'"><i class="fa fa-github-square"></i></a></li>
 			</ul>
 		</nav>
-		<div class="container">
+		<div class="container" id="header">
 			<div class="header-info">
 				<h2>열정 기록지</h2>
 				<p>손으로 10초면 충분히 할 수 있는 일을 컴퓨터로 하루종일 프로그래밍 해<br> 
