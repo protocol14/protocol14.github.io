@@ -38,8 +38,8 @@ function isMobile() {
  function homeFullScreen() {
 
     var homeSection = $('.home');
-    var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
+    window.onload = orient;
 	
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
@@ -47,12 +47,13 @@ function isMobile() {
 	
 
     if(isMobile()){
-        if(windowWidth < 900){
-		document.write(windowWidth);
+        if(window.orientation == 0){
             $('.header-container').css('height', windowHeight/2.5);
         }
     }
 }
+
+
 	
 function openProject() {
 
@@ -109,6 +110,8 @@ $(window).load(function () {
 
     smoothScroll.init();
 });
+
+
 
 
 //What happen on window resize
