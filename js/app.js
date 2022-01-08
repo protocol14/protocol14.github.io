@@ -45,10 +45,10 @@ function isMobile() {
         $('.home-fullscreen').css('height', windowHeight);
     }
 	
-	 
-	 console.log(windowWidth);
+
     if(isMobile()){
         if(windowWidth < 900){
+		document.write(windowWidth);
             $('.header-container').css('height', windowHeight/2.5);
         }
     }
