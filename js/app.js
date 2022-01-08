@@ -45,7 +45,7 @@ function isMobile() {
     }
 	 
     if(isMobile()){
-	$('.header-container').css('height', windowHeight);
+        $('.header-container').css('height', windowHeight/3);
     }
 }
 	
