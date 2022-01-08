@@ -74,19 +74,19 @@ function openProject() {
 			var link = $(this).attr('href');
 
 			if(windowWidth < 1000){
-				var singleProject1 = $('#single-project-1');
+				var singleProject = $('#single-project-1');
 				$('html, body').animate({
-				    scrollTop: singleProject1.offset().top
+				    scrollTop: singleProject.offset().top
 				}, 500);
-				if(singleProject1.is(':empty')) {
+				if(singleProject.is(':empty')) {
 					projectLoad()
 				} else {
-					singleProject1.animate({
+					singleProject.animate({
 						height: "hide", 
 					}, 400);
 	
 					setTimeout(function () {
-						singleProject1.empty();
+						singleProject.empty();
 						projectLoad();
 					}, 620);
 				}
@@ -94,61 +94,61 @@ function openProject() {
 				
 				
 				function projectLoad(){
-					singleProject1.load(link, function (response, status) {
+					singleProject.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
 					} else {
-						singleProject1.hide();
-					    singleProject1.animate({
+						singleProject.hide();
+					    singleProject.animate({
 						height: "show", 
 					   }, 500);	
 
 					    var closeProject = $('#close-project');
 					    closeProject.on('click', function () {
-						singleProject1.animate({
+						singleProject.animate({
 							height: "hide", 
 						}, 500);
 						setTimeout(function () {
 
-						    singleProject1.empty();
+						    singleProject.empty();
 						}, 500);
 					    });
 					}
 				    });
 				}
 			} else {
-				var singleProject3 = $('#single-project-3');
-				if(singleProject3.is(':empty')) {
+				var singleProject = $('#single-project-3');
+				if(singleProject.is(':empty')) {
 					projectLoad()
 				} else {
-					singleProject3.animate({
+					singleProject.animate({
 						height: "hide", 
 					}, 400);
 	
 					setTimeout(function () {
-						singleProject3.empty();
+						singleProject.empty();
 						projectLoad();
 					}, 620);
 				}
 	
 				function projectLoad(){
-					singleProject3.load(link, function (response, status) {
+					singleProject.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
 					} else {
-						singleProject3.hide();
-					    singleProject3.animate({
+						singleProject.hide();
+					    singleProject.animate({
 						height: "show", 
 					   }, 500);	
 
 					    var closeProject = $('#close-project');
 					    closeProject.on('click', function () {
-						singleProject3.animate({
+						singleProject.animate({
 							height: "hide", 
 						}, 500);
 						setTimeout(function () {
 
-						    singleProject3.empty();
+						    singleProject.empty();
 						}, 500);
 					    });
 					}
@@ -159,6 +159,7 @@ function openProject() {
 		  return false;
 	   });
 }	
+
 //Initialization 
 $(window).load(function () {
     openProject();
