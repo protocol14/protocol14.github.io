@@ -78,7 +78,7 @@ function openProject() {
 			var windowWidth = $(window).outerWidth();
 			if(windowWidth < 1000){
 				$('html, body').animate({
-				    scrollTop: singleProject.offset()
+				    scrollTop: singleProject.offset().top
 				}, 500);
 			}
 			
