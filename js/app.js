@@ -166,7 +166,7 @@ $(window).load(function () {
 //What happen on window resize
 $(window).resize(function () {
     homeFullScreen();
-    reload.empty()
+    reload = null;
     reload = openProject();
 
     $('#single-project-1').empty()
