@@ -63,7 +63,7 @@ $('.menu  a').on('click', function(e) {
 	$('#portfolio-3').css("display", "none"); 
     }
     
-}
+} 
 	
 function openProject() {
 
