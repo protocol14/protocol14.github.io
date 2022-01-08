@@ -46,8 +46,8 @@ function isMobile() {
     }
     if(windowWidth < 1000){
 	if(isMobile()){
-		window.onload = orient;
-		switch(window.orientation){
+		var orientation = window.orientation;
+		switch(orientation){
 		    case 0 :
 			$('.header-container').css('height', windowHeight/2.5);
 			break;
