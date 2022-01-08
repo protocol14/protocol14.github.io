@@ -5,16 +5,9 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
 -->
+<script src="detectmobilebrowser.js"></script>
 <script type="text/javascript">
-	let filter = "win16|win32|win64|mac|macintel"; 
-	let mobile = false;
-	let br = document.createElement("br"); 
-	  if (navigator.platform) { 
-	    if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
-	      //mobile 
-	      mobile = true;
-	    }
-	}
+	console.log(jQuery.browser.mobile);
 </script>
 <html lang="ko">
 <head>
@@ -64,13 +57,8 @@
 				<li><a href="https://github.com/protocol14" onclick="location.href='https://github.com/protocol14'"><i class="fa fa-github-square"></i></a></li>
 			</ul>
 		</nav>
-		<div class="container" id="header" style="">
+		<div class="container">
 			<div class="header-info">
-				<script type="text/javascript">
-					if(mobile){
-						$('#header').style="margin-top: auto;";
-					}
-				</script>
 				<h2>열정 기록지</h2>
 				<p>손으로 10초면 충분히 할 수 있는 일을 컴퓨터로 하루종일 프로그래밍 해<br> 
 				자동으로 수행되게 할 때 나는 더할 나위 없이 큰 행복을 느낀다.
