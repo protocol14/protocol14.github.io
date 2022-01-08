@@ -34,12 +34,11 @@
 <body>
 	<!-- 모바일인지 확인 -->
 	<script type="text/javascript">
-		
+	console.log($(window).outerHeight());
 	function isMobile() {
 	    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 	}
 	if(isMobile()){
-		$("#header").style="margin-top: auto%;";
 	} else {
 	}
 			      
