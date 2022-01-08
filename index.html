@@ -5,8 +5,16 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
 -->
-<script src="js/detectmobilebrowser.js"></script>
 <script type="text/javascript">
+	function isMobile() {
+	    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	}
+	if(isMobile()){
+		document.write("ㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎㅇㅎ');
+	} else {
+			      console.log('ㅎㅇ');
+	}
+			      
 	document.write(jQuery.browser.mobile);
 </script>
 <html lang="ko">
