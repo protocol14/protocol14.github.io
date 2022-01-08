@@ -30,6 +30,10 @@ $('.menu  a').on('click', function(e) {
     $('nav').removeClass('nav-expanded');
 });
 
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 //Calculate full with of jumbotron.
  function homeFullScreen() {
 
@@ -41,7 +45,23 @@ $('.menu  a').on('click', function(e) {
         $('.home-fullscreen').css('height', windowHeight);
     }
     if(windowWidth < 1000){
-	$('.header-container').css('height', windowHeight/2.5);
+	if(isMobile()){
+		window.onload = orient;
+		switch(window.orientation){
+		    case 0 :
+			$('.header-container').css('height', windowHeight/2.5);
+			break;
+		    case -90 :
+			$('.header-container').css('height', 'auto');
+			break;
+		    case 90 :
+			$('.header-container').css('height', 'auto');
+			break;
+		}
+	} else {
+		$('.header-container').css('height', 'auto');
+	}
+
 	$('#skill-portrait').css("display", "block"); 
 	$('#skill-landscape').css("display", "none"); 
 	    
