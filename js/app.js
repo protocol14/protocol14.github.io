@@ -67,54 +67,97 @@ $('.menu  a').on('click', function(e) {
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
-		    var singleProject = $('#single-project');
+		    
 	
 		    portfolioItem.click(function () {
 			   var link = $(this).attr('href');
 			
 			var windowWidth = $(window).outerWidth();
 			if(windowWidth < 1000){
+				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
-				    scrollTop: singleProject.offset().top
+				    scrollTop: singleProject1.offset().top
 				}, 500);
-			}
-			
-			if(singleProject.is(':empty')) {
-				projectLoad()
-			} else {
-				singleProject.animate({
-					height: "hide", 
-				}, 400);
-				
-				setTimeout(function () {
-					singleProject.empty();
-					projectLoad();
-				}, 620);
-			}
-			
-			function projectLoad(){
-				singleProject.load(link, function (response, status) {
-				if (status === "error") {
-				    alert("An error");
+				if(singleProject1.is(':empty')) {
+					projectLoad()
 				} else {
-					singleProject.hide();
-				    singleProject.animate({
-					height: "show", 
-				   }, 500);	
-
-				    var closeProject = $('#close-project');
-				    closeProject.on('click', function () {
-					singleProject.animate({
+					singleProject1.animate({
 						height: "hide", 
-				   	}, 500);
-					setTimeout(function () {
+					}, 400);
 
-					    singleProject.empty();
-					}, 500);
+					setTimeout(function () {
+						singleProject1.empty();
+						projectLoad();
+					}, 620);
+				}
+
+				function projectLoad(){
+					singleProject1.load(link, function (response, status) {
+					if (status === "error") {
+					    alert("An error");
+					} else {
+						singleProject1.hide();
+					    singleProject1.animate({
+						height: "show", 
+					   }, 500);	
+
+					    var closeProject = $('#close-project');
+					    closeProject.on('click', function () {
+						singleProject1.animate({
+							height: "hide", 
+						}, 500);
+						setTimeout(function () {
+
+						    singleProject1.empty();
+						}, 500);
+					    });
+					}
 				    });
 				}
-			    });
+			} else {
+				var singleProject3 = $('#single-project-3');
+				$('html, body').animate({
+				    scrollTop: singleProject3.offset().top
+				}, 500);
+				if(singleProject3.is(':empty')) {
+					projectLoad()
+				} else {
+					singleProject3.animate({
+						height: "hide", 
+					}, 400);
+
+					setTimeout(function () {
+						singleProject3.empty();
+						projectLoad();
+					}, 620);
+				}
+
+				function projectLoad(){
+					singleProject3.load(link, function (response, status) {
+					if (status === "error") {
+					    alert("An error");
+					} else {
+						singleProject3.hide();
+					    singleProject3.animate({
+						height: "show", 
+					   }, 500);	
+
+					    var closeProject = $('#close-project');
+					    closeProject.on('click', function () {
+						singleProject3.animate({
+							height: "hide", 
+						}, 500);
+						setTimeout(function () {
+
+						    singleProject3.empty();
+						}, 500);
+					    });
+					}
+				    });
+				}
 			}
+			
+			
 			  
 
 			  return false;
