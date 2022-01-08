@@ -114,6 +114,17 @@ function openProject() {
 					    singleProject1.animate({
 						height: "show", 
 					   }, 500);	
+						
+					   var closeProject1 = $('#close-project');
+					    closeProject1.on('click', function () {
+						singleProject1.animate({
+							height: "hide", 
+						}, 500);
+						setTimeout(function () {
+
+						    singleProject1.empty();
+						}, 500);
+					    });
 					}
 				    });
 				}
@@ -141,6 +152,17 @@ function openProject() {
 					    singleProject3.animate({
 						height: "show", 
 					   }, 500);
+						
+					   var closeProject3 = $('#close-project');
+					    closeProject3.on('click', function () {
+						singleProject3.animate({
+							height: "hide", 
+						}, 500);
+						setTimeout(function () {
+
+						    singleProject3.empty();
+						}, 500);
+					    });
 					}
 				    });
 				}
