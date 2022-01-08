@@ -69,12 +69,14 @@ function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
 		    var windowWidth = $(window).outerWidth();
+			var singleProject1 = $('#single-project-1');
+	var singleProject3 = $('#single-project-3');
 	
 		    portfolioItem.click(function () {
 			   var link = $(this).attr('href');
 
 			if(windowWidth < 1000){
-				var singleProject1 = $('#single-project-1');
+				
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
 				}, 500);
@@ -91,7 +93,7 @@ function openProject() {
 					}, 620);
 				}
 			} else {
-				var singleProject3 = $('#single-project-3');
+				
 				
 				if(singleProject3.is(':empty')) {
 					projectLoad3()
