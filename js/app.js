@@ -49,6 +49,14 @@ function isMobile() {
     if(isMobile()){
         if(window.orientation == 0){
             $('.header-container').css('height', windowHeight/2.5);
+	    $('#skill-landscape').style.display="block";
+	    $('#skill-landscape').style.display="none";
+        } else if(window.orientation == 90){
+	    $('#skill-landscape').style.display="none";
+	    $('#skill-landscape').style.display="block";
+        } else if(window.orientation == -90){
+	    $('#skill-landscape').style.display="none";
+	    $('#skill-landscape').style.display="block";
         }
     }
 }
