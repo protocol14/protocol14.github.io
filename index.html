@@ -6,17 +6,15 @@
  * License: http://graphberry.com/pages/license
 -->
 <script>
-let filter = "win16|win32|win64|mac|macintel"; 
-let md = "";
-  if ( navigator.platform ) { 
-    if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
-      //mobile 
-      md = "<div class='col-md-3'>";
-    } else { 
-      //pc 
-      md = "<div class='col-md-4'>";
-  } 
-}
+	let filter = "win16|win32|win64|mac|macintel"; 
+	let mobile = false;
+	let br = document.createElement("br"); 
+	  if (navigator.platform) { 
+	    if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+	      //mobile 
+	      mobile = true;
+	    }
+	}
 </script>
 <html lang="ko">
 <head>
@@ -47,7 +45,9 @@ let md = "";
 <body>
 	<div class="jumbotron home home-fullscreen" id="home">
 		<div class="mask"></div>
-
+		<a href="#" class="logo">
+			<img src="img/logo.png" alt="Moderno - Theme by GraphBerry.com">
+		</a>
 		<a href="" class="menu-toggle" id="nav-expander"><i class="fa fa-bars"></i></a>
 		<!-- Offsite navigation -->
 		<nav class="menu">
@@ -66,6 +66,11 @@ let md = "";
 		</nav>
 		<div class="container">
 			<div class="header-info">
+				<script>
+					if(mobile){
+						$('.header-info').style="margin-top: 50%;";
+					}
+				</script>
 				<h2>열정 기록지</h2>
 				<p>손으로 10초면 충분히 할 수 있는 일을 컴퓨터로 하루종일 프로그래밍 해<br> 
 				자동으로 수행되게 할 때 나는 더할 나위 없이 큰 행복을 느낀다.
