@@ -74,81 +74,81 @@ function openProject() {
 			var link = $(this).attr('href');
 
 			if(windowWidth < 1000){
-				var singleProject = $('#single-project-1');
+				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
-				    scrollTop: singleProject.offset().top
+				    scrollTop: singleProject1.offset().top
 				}, 500);
-				if(singleProject.is(':empty')) {
-					projectLoad()
+				if(singleProject1.is(':empty')) {
+					projectLoad1()
 				} else {
-					singleProject.animate({
+					singleProject1.animate({
 						height: "hide", 
 					}, 400);
 	
 					setTimeout(function () {
-						singleProject.empty();
-						projectLoad();
+						singleProject1.empty();
+						projectLoad1();
 					}, 620);
 				}
 				
 				
 				
-				function projectLoad(){
-					singleProject.load(link, function (response, status) {
+				function projectLoad1(){
+					singleProject1.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
 					} else {
-						singleProject.hide();
-					    singleProject.animate({
+						singleProject1.hide();
+					    singleProject1.animate({
 						height: "show", 
 					   }, 500);	
 
 					    var closeProject = $('#close-project');
 					    closeProject.on('click', function () {
-						singleProject.animate({
+						singleProject1.animate({
 							height: "hide", 
 						}, 500);
 						setTimeout(function () {
 
-						    singleProject.empty();
+						    singleProject1.empty();
 						}, 500);
 					    });
 					}
 				    });
 				}
 			} else {
-				var singleProject = $('#single-project-3');
-				if(singleProject.is(':empty')) {
-					projectLoad()
+				var singleProject3 = $('#single-project-3');
+				if(singleProject3.is(':empty')) {
+					projectLoad3()
 				} else {
-					singleProject.animate({
+					singleProject3.animate({
 						height: "hide", 
 					}, 400);
 	
 					setTimeout(function () {
-						singleProject.empty();
-						projectLoad();
+						singleProject3.empty();
+						projectLoad3();
 					}, 620);
 				}
 	
-				function projectLoad(){
-					singleProject.load(link, function (response, status) {
+				function projectLoad3(){
+					singleProject3.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
 					} else {
-						singleProject.hide();
-					    singleProject.animate({
+						singleProject3.hide();
+					    singleProject3.animate({
 						height: "show", 
 					   }, 500);	
 
 					    var closeProject = $('#close-project');
 					    closeProject.on('click', function () {
-						singleProject.animate({
+						singleProject3.animate({
 							height: "hide", 
 						}, 500);
 						setTimeout(function () {
 
-						    singleProject.empty();
+						    singleProject3.empty();
 						}, 500);
 					    });
 					}
