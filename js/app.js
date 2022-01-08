@@ -164,7 +164,4 @@ $(window).load(function () {
 //What happen on window resize
 $(window).resize(function () {
     homeFullScreen();
-	
-	$('#single-project-1').empty()
-	$('#single-project-3').empty()
 });
