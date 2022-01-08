@@ -68,12 +68,11 @@ $('.menu  a').on('click', function(e) {
 function openProject() {
 
 	    var portfolioItem = $('.portfolio-item  a');
-		var windowWidth2 = $(window).outerWidth();
 
 	    portfolioItem.click(function () {
 			var link = $(this).attr('href');
 
-			if(windowWidth2 < 1000){
+			if(windowWidth < 1000){
 				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
