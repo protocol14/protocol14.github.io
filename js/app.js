@@ -150,9 +150,11 @@ function openProject() {
 	   });
 }	
 
+let reload = null;
+
 //Initialization 
 $(window).load(function () {
-    openProject();
+    reload = openProject();
     homeFullScreen();
 
     smoothScroll.init();
@@ -164,6 +166,8 @@ $(window).load(function () {
 //What happen on window resize
 $(window).resize(function () {
     homeFullScreen();
+    reload.empty()
+    reload = openProject();
 
     $('#single-project-1').empty()
     $('#single-project-3').empty()
