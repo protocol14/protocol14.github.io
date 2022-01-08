@@ -59,7 +59,7 @@ function isMobile() {
 			break;
 		}
 	} else {
-		$('.header-container').css('height', 'auto');
+		$('.header-container').css('height', windowHeight/2.5);
 	}
 
 	$('#skill-portrait').css("display", "block"); 
