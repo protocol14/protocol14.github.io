@@ -67,12 +67,11 @@ $('.menu  a').on('click', function(e) {
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
-		    
+		    var windowWidth = $(window).outerWidth();
 	
 		    portfolioItem.click(function () {
 			   var link = $(this).attr('href');
-			
-			var windowWidth = $(window).outerWidth();
+
 			if(windowWidth < 1000){
 				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
