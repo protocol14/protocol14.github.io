@@ -164,10 +164,8 @@ $(window).load(function () {
 //What happen on window resize
 $(window).resize(function () {
     homeFullScreen();
-	
-    if(!(isMobile())){
-	$('#single-project-1').empty()
-	$('#single-project-3').empty()
-    }
+
+    $('#single-project-1').empty()
+    $('#single-project-3').empty()
 	
 });
