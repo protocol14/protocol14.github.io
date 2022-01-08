@@ -40,7 +40,7 @@ $('.menu  a').on('click', function(e) {
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
     }
-    if(windowWidth < 800){
+    if(windowWidth < 900){
 	$('.header-container').css('height', windowHeight/2.5);
 	$('#skill-portrait').css("display", "block"); 
 	$('#skill-landscape').css("display", "none"); 
