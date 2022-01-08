@@ -46,20 +46,17 @@ $('.menu  a').on('click', function(e) {
 	$('#skill-landscape').css("display", "none"); 
 	    
 	$('#portfolio-1').css("display", "block"); 
-	$('#portfolio-2').css("display", "none"); 
 	$('#portfolio-3').css("display", "none"); 
     } if(windowWidth >= 1000){
 	$('#skill-portrait').css("display", "none"); 
 	$('#skill-landscape').css("display", "block"); 
 	$('#portfolio-1').css("display", "none"); 
-	$('#portfolio-2').css("display", "none"); 
 	$('#portfolio-3').css("display", "block");
     } else {
 	$('#skill-portrait').css("display", "block"); 
 	$('#skill-landscape').css("display", "none"); 
 	    
 	$('#portfolio-1').css("display", "block"); 
-	$('#portfolio-2').css("display", "none"); 
 	$('#portfolio-3').css("display", "none"); 
     }
     
