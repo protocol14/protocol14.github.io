@@ -8,9 +8,15 @@
 			<h3>Project Name : Todo</h3>
 			<p>개인 프로젝트로 제작된 웹사이트입니다.<br>MVC 모델2로 구현된 캘린더 사이트입니다.
 			</p>
-			<a href="http://3.34.50.52/todo/login" class="btn btn-primary">View Project</a>
-			<br>
-			<br>
+			<a href="http://3.34.50.52/todo/login" class="btn btn-primary id="viewProject">View Project</a>
 		</div>
 	</div>
+	
+	<script>
+		var windowHeightProject = $(window).outerHeight();
+		
+		if(windowWidth >= 1000){
+			$('#viewProject').css("width", "100%");
+		}
+	</script>
 </div>
