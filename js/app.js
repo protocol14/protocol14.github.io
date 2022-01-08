@@ -75,7 +75,9 @@ function openProject() {
 			var windowWidth = $(window).outerWidth();
 			if(windowWidth < 1000){
 				var singleProject1 = $('#single-project-1');
-				
+				$('html, body').animate({
+				    scrollTop: singleProject1.offset().top
+				}, 500);
 				if(singleProject1.is(':empty')) {
 					projectLoad()
 				} else {
@@ -114,9 +116,7 @@ function openProject() {
 				}
 			} else {
 				var singleProject3 = $('#single-project-3');
-				$('html, body').animate({
-				    scrollTop: singleProject3.offset().top
-				}, 500);
+				
 				if(singleProject3.is(':empty')) {
 					projectLoad()
 				} else {
