@@ -30,6 +30,9 @@ $('.menu  a').on('click', function(e) {
     $('nav').removeClass('nav-expanded');
 });
 
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 //Calculate full with of jumbotron.
  function homeFullScreen() {
@@ -38,8 +41,11 @@ $('.menu  a').on('click', function(e) {
     var windowHeight = $(window).outerHeight();
 
     if (homeSection.hasClass('home-fullscreen')) {
-
         $('.home-fullscreen').css('height', windowHeight);
+    }
+	 
+    if(isMobile()){
+	$('.header-container').css('height', windowHeight);
     }
 }
 	
