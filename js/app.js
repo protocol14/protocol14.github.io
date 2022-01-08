@@ -42,12 +42,12 @@ $('.menu  a').on('click', function(e) {
     }
     if(windowWidth < 800){
 	$('.header-container').css('height', windowHeight/2.5);
-	$('#skill-portrait').style.display="block";
+	$('#skill-portrait').css("display", "block"); 
     } else {
-	$('#skill-portrait').style.display="block";
+	$('#skill-portrait').css("display", "block"); 
     }
     if(windowWidth >= 1000){
-	$('#skill-landscape').style.display="block";
+	$('#skill-landscape').css("display", "block"); 
     }
 }
 
