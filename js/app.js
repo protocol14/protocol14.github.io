@@ -30,34 +30,27 @@ $('.menu  a').on('click', function(e) {
     $('nav').removeClass('nav-expanded');
 });
 
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
 //Calculate full with of jumbotron.
  function homeFullScreen() {
 
     var homeSection = $('.home');
+    var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
-    window.onload = orient;
 	
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
     }
-	
-
-    if(isMobile()){
-        if(window.orientation == 0){
-            $('.header-container').css('height', windowHeight/2.5);
-	    $('#skill-landscape').style.display="block";
-	    $('#skill-landscape').style.display="none";
-        } else if(window.orientation == 90){
-	    $('#skill-landscape').style.display="none";
-	    $('#skill-landscape').style.display="block";
-        } else if(window.orientation == -90){
-	    $('#skill-landscape').style.display="none";
-	    $('#skill-landscape').style.display="block";
-        }
+    if(windowWidth < 800){
+	$('.header-container').css('height', windowHeight/2.5);
+	$('#skill-landscape').style.display="block";
+	$('#skill-landscape').style.display="none";
+    } else {
+	$('#skill-landscape').style.display="block";
+	$('#skill-landscape').style.display="none";
+    }
+    if(windowWidth >= 1000){
+	$('#skill-landscape').style.display="none";
+	$('#skill-landscape').style.display="block";
     }
 }
 
