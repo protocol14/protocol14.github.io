@@ -74,6 +74,14 @@ function openProject() {
 	
 		    portfolioItem.click(function () {
 			   var link = $(this).attr('href');
+			
+			var windowWidth = $(window).outerWidth();
+			if(windowWidth < 1000){
+				$('html, body').animate({
+				    scrollTop: singleProject.offset()
+				}, 500);
+			}
+			
 			if(singleProject.is(':empty')) {
 				projectLoad()
 			} else {
