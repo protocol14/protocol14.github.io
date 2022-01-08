@@ -68,14 +68,14 @@ $('.menu  a').on('click', function(e) {
 function openProject() {
 
 		    var portfolioItem = $('.portfolio-item  a');
-		    var windowWidth = $(window).outerWidth();
+			var windowWidth2 = $(window).outerWidth();
 			var singleProject1 = $('#single-project-1');
 	var singleProject3 = $('#single-project-3');
 	
 		    portfolioItem.click(function () {
 			   var link = $(this).attr('href');
 
-			if(windowWidth < 1000){
+			if(windowWidth2 < 1000){
 				
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
@@ -164,6 +164,7 @@ function openProject() {
 			  return false;
 		   });
 }	
+
 //Initialization 
 $(window).load(function () {
     openProject();
