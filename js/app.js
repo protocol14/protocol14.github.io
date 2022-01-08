@@ -75,17 +75,6 @@ function isMobile() {
 	$('#portfolio-1').css("display", "none"); 
 	$('#portfolio-3').css("display", "block");
     }
-	 /*
-	 else {
-	    $('.header-container').css('height', 'auto');
-	$('#skill-portrait').css("display", "block"); 
-	$('#skill-landscape').css("display", "none"); 
-	    
-	$('#portfolio-1').css("display", "block"); 
-	$('#portfolio-3').css("display", "none"); 
-    }
-    */
-    
 } 
 	
 function openProject() {
