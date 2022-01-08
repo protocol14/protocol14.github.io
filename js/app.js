@@ -68,7 +68,8 @@ $('.menu  a').on('click', function(e) {
 function openProject() {
 
 	    var portfolioItem = $('.portfolio-item  a');
-
+	    var windowWidth = $(window).outerWidth();
+	
 	    portfolioItem.click(function () {
 			var link = $(this).attr('href');
 
