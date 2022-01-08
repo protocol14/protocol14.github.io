@@ -67,51 +67,33 @@ $('.menu  a').on('click', function(e) {
 	
 function openProject() {
 
-		    var portfolioItem = $('.portfolio-item  a');
-			var windowWidth2 = $(window).outerWidth();
-			var singleProject1 = $('#single-project-1');
-	var singleProject3 = $('#single-project-3');
-	
-		    portfolioItem.click(function () {
-			   var link = $(this).attr('href');
+	    var portfolioItem = $('.portfolio-item  a');
+		var windowWidth = $(window).outerWidth();
 
-			if(windowWidth2 < 1000){
-				
+	    portfolioItem.click(function () {
+			var link = $(this).attr('href');
+
+			if(windowWidth < 1000){
+				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
 				}, 500);
 				if(singleProject1.is(':empty')) {
-					projectLoad1()
+					projectLoad()
 				} else {
 					singleProject1.animate({
 						height: "hide", 
 					}, 400);
-
+	
 					setTimeout(function () {
 						singleProject1.empty();
-						projectLoad1();
+						projectLoad();
 					}, 620);
 				}
-			} else {
 				
 				
-				if(singleProject3.is(':empty')) {
-					projectLoad3()
-				} else {
-					singleProject3.animate({
-						height: "hide", 
-					}, 400);
-
-					setTimeout(function () {
-						singleProject3.empty();
-						projectLoad3();
-					}, 620);
-				}
-
 				
-			}
-			
-			function projectLoad1(){
+				function projectLoad(){
 					singleProject1.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
@@ -134,8 +116,22 @@ function openProject() {
 					}
 				    });
 				}
-			    
-			    function projectLoad3(){
+			} else {
+				var singleProject3 = $('#single-project-3');
+				if(singleProject3.is(':empty')) {
+					projectLoad()
+				} else {
+					singleProject3.animate({
+						height: "hide", 
+					}, 400);
+	
+					setTimeout(function () {
+						singleProject3.empty();
+						projectLoad();
+					}, 620);
+				}
+	
+				function projectLoad(){
 					singleProject3.load(link, function (response, status) {
 					if (status === "error") {
 					    alert("An error");
@@ -158,13 +154,11 @@ function openProject() {
 					}
 				    });
 				}
-			    
-			  
+			}
 
-			  return false;
-		   });
+		  return false;
+	   });
 }	
-
 //Initialization 
 $(window).load(function () {
     openProject();
