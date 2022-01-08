@@ -48,11 +48,14 @@ $('.menu  a').on('click', function(e) {
 	$('#portfolio-1').css("display", "block"); 
 	$('#portfolio-3').css("display", "none"); 
     } if(windowWidth >= 1000){
+	    $('.header-container').css('height', auto);
+	    
 	$('#skill-portrait').css("display", "none"); 
 	$('#skill-landscape').css("display", "block"); 
 	$('#portfolio-1').css("display", "none"); 
 	$('#portfolio-3').css("display", "block");
     } else {
+	    $('.header-container').css('height', auto);
 	$('#skill-portrait').css("display", "block"); 
 	$('#skill-landscape').css("display", "none"); 
 	    
@@ -61,33 +64,6 @@ $('.menu  a').on('click', function(e) {
     }
     
 }
-
-function orient(){
-	window.onload = orient
-	switch(window.orientation){
-	    case 0 :
-		$('.header-container').css('height', windowHeight/2.5);
-	$('#skill-portrait').css("display", "block"); 
-	$('#skill-landscape').css("display", "none"); 
-	    
-	$('#portfolio-1').css("display", "block"); 
-	$('#portfolio-3').css("display", "none"); 
-		break;
-	    case -90 :
-		$('#skill-portrait').css("display", "none"); 
-	$('#skill-landscape').css("display", "block"); 
-	$('#portfolio-1').css("display", "none"); 
-	$('#portfolio-3').css("display", "block");
-		break;
-	    case 90 :
-		$('#skill-portrait').css("display", "none"); 
-	$('#skill-landscape').css("display", "block"); 
-	$('#portfolio-1').css("display", "none"); 
-	$('#portfolio-3').css("display", "block");
-		break;
-	}
-}
-
 	
 function openProject() {
 
