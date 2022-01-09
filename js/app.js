@@ -89,9 +89,6 @@ function openProject() {
 				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
-					if($('html, body').on('mousewheel')){
-				break;
-				}
 				}, 500);
 				if(singleProject1.is(':empty')) {
 					projectLoad1()
