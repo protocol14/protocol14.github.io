@@ -89,7 +89,7 @@ function openProject() {
 				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
-					$('html, body').on('mousewheel',function(e){
+					if($('html, body').on('mousewheel')){
 				break;
 				}
 				}, 500);
