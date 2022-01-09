@@ -93,14 +93,8 @@ function openProject() {
 				if(singleProject1.is(':empty')) {
 					projectLoad1()
 				} else {
-					singleProject1.animate({
-						height: "hide", 
-					}, 400);
-	
-					setTimeout(function () {
-						singleProject1.empty();
-						projectLoad1();
-					}, 620);
+					singleProject1.empty();
+					projectLoad1();
 				}
 				
 				
