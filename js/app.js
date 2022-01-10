@@ -112,9 +112,6 @@ function openProject() {
 					   }, 0);
 					    singleProject1.animate({
 						height: "show", 
-					   }, 500);	
-						whiteSpace.animate({
-						height: "hide", 
 					   }, 500);
 					}
 				    });
@@ -176,8 +173,8 @@ $(window).load(function () {
 $(window).resize(function () {
     homeFullScreen();
     openProject();
-/*
+
     $('#single-project-1').empty()
     $('#single-project-3').empty()
-	*/
+	
 });
