@@ -156,7 +156,7 @@ function openProject() {
 
 //Initialization 
 $(window).load(function () {
-    reload = openProject();
+    openProject();
     homeFullScreen();
 
     smoothScroll.init();
