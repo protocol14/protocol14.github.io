@@ -126,7 +126,7 @@ function openProject() {
 					}, 400);
 					whiteSpace.animate({
 						height: "show", 
-					   }, 300);
+					   }, 400);
 	
 					setTimeout(function () {
 						singleProject3.empty();
