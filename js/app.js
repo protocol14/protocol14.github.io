@@ -176,8 +176,8 @@ $(window).load(function () {
 $(window).resize(function () {
     homeFullScreen();
     openProject();
-
+/*
     $('#single-project-1').empty()
     $('#single-project-3').empty()
-	
+	*/
 });
