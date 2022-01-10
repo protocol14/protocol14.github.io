@@ -107,6 +107,9 @@ function openProject() {
 					    alert("An error");
 					} else {
 						singleProject1.hide();
+						whiteSpace.animate({
+						height: "show", 
+					   }, 0);
 					    singleProject1.animate({
 						height: "show", 
 					   }, 500);	
@@ -140,6 +143,9 @@ function openProject() {
 					    alert("An error");
 					} else {
 						singleProject3.hide();
+						whiteSpace.animate({
+						height: "show", 
+					   }, 0);
 					    singleProject3.animate({
 						height: "show", 
 					   }, 500);
