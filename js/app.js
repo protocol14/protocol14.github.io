@@ -90,7 +90,7 @@ function openProject() {
 				var singleProject1 = $('#single-project-1');
 				$('html, body').animate({
 				    scrollTop: singleProject1.offset().top
-				}, 400);
+				}, 300);
 				
 				if(singleProject1.is(':empty')) {
 					projectLoad1()
