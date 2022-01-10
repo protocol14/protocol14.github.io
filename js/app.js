@@ -41,6 +41,8 @@ function isMobile() {
     var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
 	
+	 $('#whiteSpace').hide();
+	 
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
     }
@@ -81,6 +83,7 @@ function openProject() {
 
 	    var portfolioItem = $('.portfolio-item  a');
 	    var windowWidth = $(window).outerWidth();
+	    var whiteSpace = $('#whiteSpace');
 	
 	    portfolioItem.click(function () {
 			var link = $(this).attr('href');
@@ -109,6 +112,9 @@ function openProject() {
 					    singleProject1.animate({
 						height: "show", 
 					   }, 500);	
+						whiteSpace.animate({
+						height: "hide", 
+					   }, 500);
 					}
 				    });
 				}
@@ -136,6 +142,9 @@ function openProject() {
 					    singleProject3.animate({
 						height: "show", 
 					   }, 500);
+						whiteSpace.animate({
+						height: "hide", 
+					   }, 500);
 					}
 				    });
 				}
@@ -144,8 +153,6 @@ function openProject() {
 		  return false;
 	   });
 }	
-
-let reload = null;
 
 //Initialization 
 $(window).load(function () {
@@ -161,8 +168,7 @@ $(window).load(function () {
 //What happen on window resize
 $(window).resize(function () {
     homeFullScreen();
-    reload = null;
-    reload = openProject();
+    openProject();
 
     $('#single-project-1').empty()
     $('#single-project-3').empty()
