@@ -176,7 +176,8 @@ $(window).resize(function () {
 	    openProject();
 	} else {
 		if($(window).outerWidth() < 1000){
-		homeFullScreen();
+			homeFullScreen();
+			openProject();
 		} else {
 			homeFullScreen();
 	    		openProject();
