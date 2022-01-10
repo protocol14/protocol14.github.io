@@ -171,10 +171,14 @@ $(window).load(function () {
 
 //What happen on window resize
 $(window).resize(function () {
-    homeFullScreen();
-    openProject();
+	if(!(isMobile())){
+	    homeFullScreen();
+	    openProject();
 
-    $('#single-project-1').empty()
-    $('#single-project-3').empty()
+	    $('#single-project-1').empty()
+	    $('#single-project-3').empty()
+	} else {
+		homeFullScreen();
+	}
 	
 });
