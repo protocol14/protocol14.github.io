@@ -171,17 +171,6 @@ $(window).load(function () {
 
 //What happen on window resize
 $(window).resize(function () {
-	if(!(isMobile())){
-	    homeFullScreen();
-	    openProject();
-	} else {
-		if($(window).outerWidth() < 1000){
-			homeFullScreen();
-			openProject();
-		} else {
-			homeFullScreen();
-	    		openProject();
-		}
-	}
-	
+	homeFullScreen();
+	openProject();
 });
