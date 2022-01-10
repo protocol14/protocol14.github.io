@@ -40,8 +40,6 @@ function isMobile() {
     var homeSection = $('.home');
     var windowWidth = $(window).outerWidth();
     var windowHeight = $(window).outerHeight();
-	
-	 $('#whiteSpace').hide();
 	 
     if (homeSection.hasClass('home-fullscreen')) {
         $('.home-fullscreen').css('height', windowHeight);
@@ -126,6 +124,9 @@ function openProject() {
 					singleProject3.animate({
 						height: "hide", 
 					}, 400);
+					whiteSpace.animate({
+						height: "show", 
+					   }, 300);
 	
 					setTimeout(function () {
 						singleProject3.empty();
