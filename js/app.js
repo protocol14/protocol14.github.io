@@ -174,11 +174,13 @@ $(window).resize(function () {
 	if(!(isMobile())){
 	    homeFullScreen();
 	    openProject();
-
-	    $('#single-project-1').empty()
-	    $('#single-project-3').empty()
 	} else {
+		if($(window).outerWidth() < 1000){
 		homeFullScreen();
+		} else {
+			homeFullScreen();
+	    		openProject();
+		}
 	}
 	
 });
