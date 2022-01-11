@@ -88,7 +88,7 @@ function openProject() {
 
 			if(windowWidth < 1000){
 				var singleProject1 = $('#single-project-1');
-				$('html, body').animate({
+				$('html, body').stop().animate({
 				    scrollTop: singleProject1.offset().top
 				}, 300);
 				
