@@ -7,7 +7,7 @@
 [Database] - MySQL(MariaDB, HeidiSQL)
 [IDE] - STS(4.12.1)
 
-배포환경
+배포 환경
 [Platform] - AWS Lightsail
 [OS] - Ubuntu 18.04
 [Setting] - Java 11, Tomcat 9
