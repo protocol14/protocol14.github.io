@@ -1,0 +1,28 @@
+프로젝트명 : Voyage
+
+작업 환경
+[OS] - Window 10
+[Language] - Java(Open JDK 11), JavaScript, HTML5, CSS3
+[Library & Module] - Spring Boot(2.6.1), jQuery, AJAX, Apache Tomcat9, Servlet, JSP, JSTL, Maven, MyBatis, lombok
+[Database] - MySQL(MariaDB, HeidiSQL)
+[IDE] - STS(4.12.1)
+
+배포환경
+[Platform] - AWS Lightsail
+[OS] - Ubuntu 18.04
+[Setting] - Java 11, Tomcat 9
+
+
+테스트용 계정
+
+[일반 계정]
+ID  : 141
+PW : 1234
+
+[사업자 계정]
+ID  : test
+PW : 1234
+
+[관리자 계정]
+ID  : admin
+PW : 1234
